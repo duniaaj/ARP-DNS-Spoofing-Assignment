@@ -1,0 +1,7 @@
+# DNS Spoofing Target List (Task 3)
+# These domains will be targeted for redirection to the Attacker's IP (192.168.10.200).
+# The script will read these, so list your target domains below, one per line.
+
+www.google.com
+test-assignment.com
+secure-banking-site.org

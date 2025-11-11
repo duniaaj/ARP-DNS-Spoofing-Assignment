@@ -1,0 +1,19 @@
+
+--- PCAP Traffic Analysis Summary (Task 2) ---
+Total Packets Analyzed: 923
+
+--- DNS QUERIES ---
+  Query: 1.10.168.192.in-addr.arpa
+  Query: 200.10.168.192.in-addr.arpa
+  Query: www.google.com
+
+--- VISITED HTTP URLs ---
+  No obvious HTTP Host headers found.
+
+--- PROTOCOL COUNTS ---
+  UDP: 11 packets
+  ICMP: 9 packets
+
+--- TOP 5 TALKERS (Source IPs) ---
+  192.168.10.10: 11 packets sent
+  192.168.10.200: 9 packets sent
