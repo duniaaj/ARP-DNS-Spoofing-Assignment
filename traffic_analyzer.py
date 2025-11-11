@@ -113,7 +113,7 @@ def main():
     # Print to console
     print(report_content)
     
-    # Save to file (required deliverable)
+    # Save to file
     with open(OUTPUT_LOG, 'w') as f:
         f.write(report_content)
     

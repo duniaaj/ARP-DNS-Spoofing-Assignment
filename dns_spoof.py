@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # -----------------------------------------------------------------------------
-# DNS SPOOFING TOOL (Task 3 - FINAL FIX)
+# DNS SPOOFING TOOL (Task 3 )
 # Intercepts DNS queries, spoofs selected domains, and forwards non-targets.
 # -----------------------------------------------------------------------------
 import sys
