@@ -33,7 +33,6 @@ The entire lab network is simulated using Linux Namespaces to create three isola
 ### Task 1 & 3: Attack Execution (Run in three separate Attacker terminals)
 
 | Terminal | Script / Role | Purpose |
-| :--- | :--- | :--- | :--- |
 | **T1** | `arp_spoof.py` | Poisons ARP caches to establish MitM. 
 | **T2** | `python3 -m http.server 80` | Fake Web Server to serve the spoofed page. |
 | **T3** | `dns_spoof.py` | Intercepts DNS queries and replies with the Attacker's IP (`192.168.10.200`). | 
